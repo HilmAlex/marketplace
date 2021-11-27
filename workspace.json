@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "projects": {
+    "admin-portal": "apps/admin-portal",
+    "admin-portal-e2e": "apps/admin-portal-e2e",
+    "client": "apps/client",
+    "client-e2e": "apps/client-e2e",
+    "entities": "libs/entities",
+    "graphql-api": "apps/graphql-api",
+    "rest-api": "apps/rest-api",
+    "services": "libs/services",
+    "shared": "libs/shared"
+  }
+}

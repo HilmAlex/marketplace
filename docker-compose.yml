@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: admin@admin.com
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: my_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+  client:
+    image: client:latest
+    expose:
+      - 8080
+  rest-api:
+    image: rest-api:latest
+    expose:
+      - 3000
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - rest-api
+      - db
+      - client
+    ports:
+      - "80:80"

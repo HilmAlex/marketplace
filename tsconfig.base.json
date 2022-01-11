@@ -18,7 +18,8 @@
     "paths": {
       "@marketplace/entities": ["libs/entities/src/index.ts"],
       "@marketplace/services": ["libs/services/src/index.ts"],
-      "@marketplace/shared": ["libs/shared/src/index.ts"]
+      "@marketplace/shared": ["libs/shared/src/index.ts"],
+      "@marketplace/client/components/*":["apps/client/components"]
     }
   },
   "exclude": ["node_modules", "tmp"]
